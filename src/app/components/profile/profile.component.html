@@ -1,0 +1,60 @@
+<form action="" class="search-form">
+  <div class="form-group">
+    <p class="titulo"><span class="Github-Search">Github</span> <span class="text-style-1"> Search</span></p> 
+    <input type="text" class="search-input" placeholder="Procure o Usuário pelo nome" [(ngModel)]="username" name="username" (keyup)="findProfile()">
+    <span class="glyphicon glyphicon-search"></span>
+  </div>
+  
+  
+      
+  
+  
+ 
+  
+</form>
+
+<div *ngIf="profile">
+  <div class="panel panel-default">
+    <div class="panel heading">
+    </div>
+    <div class="panel body">    
+      <div class="row">
+        <div class="col-sm-3 name">
+          <img src="{{profile.avatar_url}}" class="rounded-circle img-responsive" alt="Imagem de Perfil">
+          <p>{{profile.name}}</p> 
+          <p>{{profile.login}}</p>
+
+          <ul>
+          <li><img src="./assets/img/followers.png" alt="">{{profile.followers}} Seguidores</li>
+          <li><img src="./assets/img/following.png" alt="">Seguindo {{profile.following}}</li>
+          <li *ngIf="profile.email"><img src="./assets/img/email.png" alt=""><a href="emailto:{{profile.email}}" target="_blank">{{profile.email}}</a></li>
+          <li *ngIf="profile.bio"><img src="./assets/img/bio.png" alt="">{{profile.bio}}</li>
+          <li><img src="./assets/img/repository.png" alt="">{{profile.public_repos}} Repositório(s)</li>
+        </ul>
+        
+        </div>
+        
+        <div class="col-sm-8">
+          <div>
+           
+            <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">Veja o Perfil no Github</a></p>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Repos</h3>
+              </div>
+              <div class="panel-body" *ngFor="let repo of repos">
+                <p class="clearfix">
+                  <span class="repo-title">{{repo.name}}</span> <a href="{{repo.html_url}}" class="btn btn-sm btn-warning pull-right" target="_blank">Veja este projeto no Github</a>
+                </p>
+                <p>{{repo.description}}</p>
+                <p><img class="star" src="./assets/img/star.png" alt="">{{repo.stargazers_count}}</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+
+</div>

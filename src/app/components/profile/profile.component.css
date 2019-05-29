@@ -1,0 +1,138 @@
+*{
+  font-size: 20px;
+}
+ul li{
+  list-style-type: none;
+  padding-bottom: 10px;
+  color: #5c5c5c;
+  position:relative;
+  right:30px;
+}
+
+.repo-title{
+
+  color: #ac53f2;
+  font-size: 35px;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #ac53f2 !important;
+  border:none;
+}
+
+.btn-success {
+  color: #ac53f2;
+  background-color: #000000 !important;
+  border:none;
+  font-style: italic;
+  font-weight: 100 !important;
+}
+
+.name{
+  margin-left: 30px;
+}
+.name p{
+  margin-left: 10px;
+}
+.name p:nth-of-type(2){
+  color: #5c5c5c;
+}
+
+ul li img{
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+.search-form{
+    padding-top: 50px;
+}
+.search-input {
+    width: 650px;
+    height: 50px;
+    position: relative;
+    background-color: var(--white);
+    bottom: 10px;
+  }
+
+ 
+
+  .Github-Search {
+    
+  height: 50px;
+  font-family: monaco,Consolas,Lucida Console,monospace !important;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  }
+  
+  .text-style-1{
+    font-family: Raleway !important; 
+    font-weight: 200;
+    font-style: italic;
+    font-size: 35px;
+  }
+
+  .titulo{
+        width: 280px;
+        height: 50px;
+        font-size: 40px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+        display: inline;
+        margin-right: 120px;
+  }
+
+
+  .glyphicon{
+    color: white;
+    font-size: 30px;
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    text-align: center;
+    padding-top: 11px;
+    top: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #ac53f2;
+  }
+
+  .star{
+    width: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+ .col-sm-3 p:nth-of-type(1){
+
+  font-size: 30px;
+ }
+
+ .col-sm-3 p:nth-of-type(2){
+
+  padding-bottom: 30px;
+ }
+
+ @media only screen and (max-width: 375px) {
+
+  .search-input{
+    width: 240px;
+  }
+
+  .titulo{
+
+    margin:0;
+    left: 40px;
+    position: relative;
+  
+  }
+
+ }
